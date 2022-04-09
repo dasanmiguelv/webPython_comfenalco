@@ -1,0 +1,44 @@
+.contenedor{
+    width: 200px;
+    border:1px solid #ccc;    
+    float:left;   
+    border-radius:5px;    
+    margin-left: 20px;
+    
+    padding: 50px;
+    box-shadow: 5px 5px 5px #ccc;
+}
+    .barral{
+        width: 200px;
+        height: 350px;
+        background-color: burlywood;       
+    }
+    .contenido{
+        width: 530px;
+        height: 450px;
+        text-align: justify
+    }
+    .barrar{
+        width: 200px;
+        height: 450px;
+        background-color:darkgray;
+    }
+
+.pie{
+    width: 600px;
+    border:1px solid #ccc;    
+    float:left;  
+    border-radius:5px;
+    margin-left: 20px;
+    align-content: center;
+    
+    padding: 50px;
+    box-shadow: 5px 5px 5px #ccc;
+
+}
+    .conclusion{
+        width: 700px;
+        height: 150px;
+        
+    }
+    
