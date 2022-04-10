@@ -1,0 +1,9 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: lightblue !important;
+}
+
+h1 {
+    color: black;
+}
