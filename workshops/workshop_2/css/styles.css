@@ -8,6 +8,10 @@ h1 {
     color: black;
 }
 
+p{
+    text-align: justify;
+}
+
 nav {
     background-color: white;
 }
@@ -48,19 +52,19 @@ a:link {
     float: left;
     margin-left: 20px;
     padding: 10px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 3px 3px 3px black;
+}
+
+.intro {
+    width: 300px;
+    height: 300px;
 }
 
 .flags {
     float: left;
     width: 100px;
-    height: 300px;
+    height: 400px;
     margin-left: 20px;
-}
-
-.resume {
-    width: 300px;
-    height: 300px;
 }
 
 .descriptionCountries{
@@ -69,13 +73,41 @@ a:link {
 }
 
 .buttonMath {
-    width: 50;
+    width: 200;
     height: 350px;
+}
+
+.paragraphs3{
+    float: left;
+    width: 350px;
+    height: 400px;
+    padding: 10px;    
+    margin: 30px;       
+}
+
+.imgs5{    
+    float: left;    
+    width: 700px;
+    height: 450px;
+    padding: 10px;
+    margin-left: 90px;    
 }
 
 .iconFlags{
     float: left;
-    padding: 20px;  
+    padding: 30px;  
     width:70px;
     height: 70px;
+}
+
+.giff{
+    float: left;
+}
+
+.imgs{
+    float: left;
+    margin: 40px;    
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
 }
