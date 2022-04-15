@@ -52,7 +52,7 @@ a:link {
     float: left;
     margin-left: 20px;
     padding: 10px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 2px black;
 }
 
 .intro {
@@ -74,7 +74,7 @@ a:link {
 
 .buttonMath {
     width: 200;
-    height: 350px;
+    height: 400px;
 }
 
 .paragraphs3{
@@ -110,4 +110,23 @@ a:link {
     width: 150px;
     height: 150px;
     border-radius: 10px;
+}
+button{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button:hover{
+    background-color: darkslategray;    
+    color: white;
 }
