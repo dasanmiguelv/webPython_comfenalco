@@ -1,0 +1,81 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: lightblue;
+}
+
+h1 {
+    color: black;
+}
+
+nav {
+    background-color: white;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+}
+
+li:hover {
+    background-color: lightgray;    
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+.contenedor {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    float: left;
+    margin-left: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.flags {
+    float: left;
+    width: 100px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.resume {
+    width: 300px;
+    height: 300px;
+}
+
+.descriptionCountries{
+    width: 450px;
+    height: 400px;
+}
+
+.buttonMath {
+    width: 50;
+    height: 350px;
+}
+
+.iconFlags{
+    float: left;
+    padding: 20px;  
+    width:70px;
+    height: 70px;
+}
