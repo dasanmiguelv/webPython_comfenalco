@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #202124;
+}
+
+@font-face{
+    font-family: 'metallFont';    
+    src: url(fonts/PASTOROF.TTF);
+}
+
+#fontPesonal{
+    font-family: 'metallFont';
+    font-size: 50px;
+}
+
+.contenedor {
+    width: 1000px;
+    height: 300px;    
+    border-radius: 5px;
+    float: left;
+    margin-left: auto;    
+    padding: 10px;    
+}
+
+.contendor_cancion{
+    width: 200px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 5px;
+    float: left;
+    flex-wrap: nowrap;    
+    margin: 10px 10px 20px 15px;
+    padding: 10px;
+    display: flex;
+}
+
+h1 {
+    color:white;
+    ;
+}
+.dataSong{
+    width: 100px;
+    margin-left: 5px; 
+    margin-top: 10px;
+    color: white;  
+    font-size: 14px;
+    float: nones;
+}
+
+.dataAlbum{
+    margin-top: 5px; 
+    margin-top: 10px;
+    color: lightgray;  
+    font-size: 12px;
+}
+
+.caratula{
+    width: 80px;
+    height: 90px;
+    float: left;
+}
+
+.span2{
+    color: #bdc1c6;
+--center-column-width: 652px;
+--rhs-width: 369px;
+--center-column-margin: 28px;
+--rhs-margin: 44px;
+font-family: arial,sans-serif;
+font-size: 22px;
+line-height: 28px;
+flex: 0 1 100%;
+max-width: 92vw;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.span1{
+    --center-column-width: 652px;
+--rhs-width: 369px;
+--center-column-margin: 28px;
+--rhs-margin: 44px;
+font-family: arial,sans-serif;
+font-size: 22px;
+line-height: 28px;
+-webkit-tap-highlight-color: rgba(255,255,255,.10);
+color: #8a8a8a;
+flex: 0 1 100%;
+max-width: 92vw;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
