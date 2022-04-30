@@ -38,7 +38,6 @@ function contar_palabras() {
     Couldn't be much more from the heart
     Forever trusting who we are
     No, nothing else matters`;
-
     palabras_nothing_else_matters = nothing_eles_matters.split(" ").length;
 }
 
