@@ -7,8 +7,7 @@ Created on Sun May  1 22:00:57 2022
 
 def traductor_de_frases_a_español(frase, diccionario):
     frase_list = frase.split()
-    frase_list_traducida = []
-    frase_en_español = ""
+    frase_list_traducida = []    
 
     for palabra in frase_list:        
         frase_list_traducida.append(diccionario[palabra])
@@ -44,9 +43,19 @@ dictionary_example = {
     "complex": "complejo",
     "complicated":"complicado"}
 
+frase = input("ingrese frase: ")
+
 frases = ["I thank gods for my soul", "I am the captain of my soul", 
           "love is more powerful than fear", "beautiful is better than ugly",
           "Simple is better than complex", "complex is better than complicated"]
+
+for palabra in frase:
+    if palabra not in dictionary_example:
+        nueva_palabra = input("La palabra {} no existe por favor ingresa al diccionario: ".format(palabra))
+        traduccion_nueva_palabra = input("Ingrese la tradcción de la palabra: ")
+        dictionary_example[nueva_palabra] = traduccion_nueva_palabra
+
+frases.append(frase)
 
 for frase in frases:    
     print("las traducción de la frase --> {} es: ".format(frase) + "\n" + traductor_de_frases_a_español(frase, dictionary_example))
