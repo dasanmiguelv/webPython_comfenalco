@@ -17,7 +17,20 @@ def consultar_por_nombre_plato(menu, nombre_plato):
         if nombre_plato in item_menu[2]:            
             print("-"*50)
             print(item_menu)
-            print("-"*50)           
+            print("-"*50)        
+           
+def menu_por_tipo(menu):
+    for item_menu in menu:
+        menu_tipos_plato = {}
+        items = []        
+        if menu_tipos_plato.get(item_menu[1]):
+            items.append(item_menu[2])
+            menu_tipos_plato[item_menu[1]] = items
+        else:
+            items.append(item_menu[2])
+            menu_tipos_plato[item_menu[1]] = items
+            
+    return menu_tipos_plato
 
 
 def iniciar_aplicacion():
