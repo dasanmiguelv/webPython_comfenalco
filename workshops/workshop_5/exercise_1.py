@@ -44,7 +44,6 @@ def consultar_por_nombre_plato(menu, nombre_plato):
         if nombre_plato in item_menu[2]:
             print("-"*50)
             print(item_menu)
-<<<<<<< HEAD
             print("-"*50)        
            
 def listar_menu_por_plato(menu):
@@ -63,39 +62,7 @@ def listar_menu_por_plato(menu):
 def imprimir_diccionario(diccionario):
     for key, value in diccionario.items():
         print(key, value)
-=======
-            print("-"*50)
-
-def menu_por_tipo(menu):
-    for item_menu in menu:
-        menu_tipos_plato = {}
-        items = []
-        if menu_tipos_plato.get(item_menu[1]):
-            items.append(item_menu[2])
-            menu_tipos_plato[item_menu[1]] = items
-        else:
-            items.append(item_menu[2])
-            menu_tipos_plato[item_menu[1]] = items
-
-    return menu_tipos_plato
->>>>>>> 2021a90af61a48760711a15e9cdb9373a0a20fa7
-
-def listar_menu_por_plato(menu):
-    listado_por_tipo_de_plato = {}
-    for item in menu:
-        tipo_plato = item[1]
-        nombre = item[2]
-        if tipo_plato not in listado_por_tipo_de_plato:
-            listado_por_tipo_de_plato[tipo_plato] = []
-
-        listado_por_tipo_de_plato[tipo_plato].append(nombre)
-
-    return listado_por_tipo_de_plato
-
-
-def imprimir_diccionario(diccionario):
-    for key, value in diccionario.items():
-        print(key, value)
+        print("-"*50)
 
 def iniciar_aplicacion():
 
@@ -153,11 +120,7 @@ def mostrar_menu_aplicacion(menu) -> bool:
     elif opcion_elegida == "5":
         listado_por_tipo_de_plato = listar_menu_por_plato(menu)
         imprimir_diccionario(listado_por_tipo_de_plato)
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 2021a90af61a48760711a15e9cdb9373a0a20fa7
     elif opcion_elegida == "6":
         continuar_ejecutando = False
     else:
