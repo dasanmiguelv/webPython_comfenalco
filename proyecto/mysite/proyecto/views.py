@@ -3,11 +3,7 @@ from django.http import HttpResponse
 
 from .models import Game
 
-#def index(request):
- #   return HttpResponse("Hola mundo mi nombre es Diego... saludos desde de django!")
-
-def listar_juegos(request):
-    #return HttpResponse("Hola mundo desde vies de django!")     
+def listar_juegos(request):    
     juegos = Game.objects.all()
 
     messaje = "Lista de juegos"
