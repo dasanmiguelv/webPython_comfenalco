@@ -3,6 +3,7 @@ from .models import Cita_medica, Paciente, Doctor
 
 class PacienteAdmin(admin.ModelAdmin):    
     search_fields = ['nombre', 'apellido']
+    list_display = ['id', 'nombre', 'apellido', 'fecha_nacimiento']
 
 class DoctorAdmin(admin.ModelAdmin):
     search_fields = ['nombre' , 'apellido']
