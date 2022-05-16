@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import Cita_medica, Paciente
-from .models import Doctor
+from .models import Cita_medica, Paciente, Doctor
 
-class PacienteAdmin(admin.ModelAdmin):
-    search_fields = ['nombre']
+class PacienteAdmin(admin.ModelAdmin):    
+    search_fields = ['nombre', 'apellido']
 
 class DoctorAdmin(admin.ModelAdmin):
-    search_fields = ['nombre']
+    search_fields = ['nombre' , 'apellido']
 
 class Cita_medicaAdmin(admin.ModelAdmin):
+    list_display = ['paciente', 'doctor', 'ubicacion', 'fecha']
     list_filter = ['fecha']
 
 # Register your models here.
