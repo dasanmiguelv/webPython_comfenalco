@@ -8,7 +8,7 @@ class Paciente(models.Model):
     fecha_nacimiento = models.DateField(auto_now=False, auto_now_add=False)
 
     def __str__(self):
-        return "{} - {} - {}".format(self.nombre, self.apellido, self.fecha_nacimiento)
+        return "{} {} - {}".format(self.nombre, self.apellido, self.fecha_nacimiento)
 
 
 class Doctor(models.Model):
@@ -17,7 +17,7 @@ class Doctor(models.Model):
     apellido = models.CharField(max_length=200)
 
     def __str__(self):
-        return "{} - {}".format(self.nombre, self.apellido)    
+        return "{} {}".format(self.nombre, self.apellido)    
 
 class Cita_medica(models.Model):
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
@@ -26,4 +26,4 @@ class Cita_medica(models.Model):
     fecha = models.DateField()
 
     def __str__(self):
-        return "{} -  {} - {} -  {}".format(self.paciente.nombre, self.doctor.nombre, self.ubicacion, self.fecha)
+        return "{} {} - {} -  {}".format(self.paciente, self.doctor, self.ubicacion, self.fecha)
