@@ -20,7 +20,7 @@
             <a class="nav-link" href="{% url 'appMenu:home' %}">home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'appMenu:citas' %}">Citas</a>
+            <a class="nav-link" href="{% url 'appMenu:listcitas' %}">Citas</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{% url 'appMenu:pacientes' %}">Pacientes</a>
@@ -29,8 +29,8 @@
             <a class="nav-link" href="{% url 'appMenu:doctores' %}">Doctores</a>
         </li>
     </ul>
+
     {% block content %}
     {% endblock %}
 </body>
-
 </html>

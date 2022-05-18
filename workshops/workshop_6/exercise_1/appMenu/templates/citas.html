@@ -1,3 +1,30 @@
 {% extends 'base.html' %}
 
-{% list_citas %}
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Paciente</th>
+            <th>Doctor</th>
+            <th>Consultorio</th>
+            <th>Fecha_Nacimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if "citas" %}
+        {% for cita in citas %}
+        <tr>
+            <td>{{cita.paciente}}</td>
+            <td>{{cita.doctor}}</td>
+            <td>{{cita.ubicacion}}</td>
+            <td>{{cita.fecha}}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h1>No existen citas</h1>
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}
