@@ -2,13 +2,21 @@
 
 {% block content %}
 
-<table>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<table style="width:100%">
     <thead>
         <tr>
             <th>Paciente</th>
             <th>Doctor</th>
             <th>Consultorio</th>
-            <th>Fecha_Nacimiento</th>
+            <th>Fecha</th>
         </tr>
     </thead>
     <tbody>
