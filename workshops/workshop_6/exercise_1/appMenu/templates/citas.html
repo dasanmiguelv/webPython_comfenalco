@@ -33,6 +33,23 @@
         <h1>No existen citas</h1>
         {% endif %}
     </tbody>
-</table>
+</table><br>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="paciente_nombre">Nombre Paciente</label><br>
+    <input type="text" id="paciente_nombre" name="paciente_nombre"><br><br>    
+
+    <label for="doctor_nombre">Nombre Doctor</label><br>
+    <input type="text" id="doctor_nombre" name="doctor_nombre"><br><br>
+
+    <label for="ubicacion">Consultorio</label><br>
+    <input type="number" id="ubicacion" name="ubicacion" min="101" max="105"><br><br>
+
+    <label for="fecha_cita">Fecha Cita</label><br>
+    <input type="date" id="fecha_cita" name="fecha_cita"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
 
 {% endblock %}

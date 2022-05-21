@@ -6,7 +6,9 @@ class PacienteAdmin(admin.ModelAdmin):
     list_display = ['id', 'nombre', 'apellido', 'fecha_nacimiento']
 
 class DoctorAdmin(admin.ModelAdmin):
-    search_fields = ['nombre' , 'apellido']
+    search_fields = ['id', 'nombre' , 'apellido']
+    list_display = ['id', 'nombre', 'apellido'
+    ]
 
 class Cita_medicaAdmin(admin.ModelAdmin):
     list_display = ['paciente', 'doctor', 'ubicacion', 'fecha']
