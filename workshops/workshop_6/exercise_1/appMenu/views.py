@@ -25,6 +25,23 @@ def registrar_doctor(request):
     doctor = Doctor.objects.create(nombre=nombre, apellido=apellido)
     return (redirect('/list_doctores'))    
 
+def edicion_doctor(request, id):
+    doctor = Doctor.objects.get(id=id)     
+    return render(request, 'ediciondoctores.html', {"doctores":doctor})
+
+def editar_doctor(request):
+    id = request.POST['idDr']
+    nombre = request.POST['nombreDr']
+    apellido = request.POST['apellidoDr']
+
+    print(id, nombre, apellido)
+
+    doctor = Doctor.objects.get(id=id)        
+    doctor.nombre = nombre 
+    doctor.apellido = apellido 
+    doctor.save()
+    return (redirect('/list_doctores'))   
+
 def eliminar_doctor(request, id):
     doctor = Doctor.objects.get(id=id)
     doctor.delete()
