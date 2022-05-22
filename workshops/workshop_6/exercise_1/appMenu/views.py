@@ -6,7 +6,10 @@ from .models import Cita_medica, Paciente, Doctor
 def index(request):    
     return render(request, 'index.html')
 
-
+def list_pacientes(request):
+    pacientes = Paciente.objects.all()  
+    contexto = {"pacientes": pacientes}    
+    return render(request, 'pacientes.html', contexto)
 
 def list_citas(request):
     if request.method == 'POST':
