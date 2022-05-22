@@ -30,11 +30,6 @@ def eliminar_doctor(request, id):
     doctor.delete()
     return (redirect('/list_doctores'))    
 
-def editar_doctor(request, id):
-    doctor = Doctor.objects.get(id=id)      
-    return render(request, 'ediciondoctores.html', {"doctores":doctor})
-
-
 #View the doctors
 
 def list_citas(request):

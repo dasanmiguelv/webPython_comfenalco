@@ -6,11 +6,11 @@ app_name = "appMenu"
 
 urlpatterns = [
  path("", views.index, name="home"),
-
- path('list_doctores', views.list_doctor, name="list_doctores"),
- path('registrar_doctor', views.registrar_doctor, name="list_doctores"),
- path('eliminar_doctor/<id>', views.eliminar_doctor, name="list_doctores"),
- path('editar_doctor/<id>', views.editar_doctor, name="list_doctores"), 
+ path('list_doctores', views.list_doctor, name="list_doctores"), 
+ path('registrar_doctor', views.registrar_doctor),
+ path('eliminar_doctor/<id>', views.eliminar_doctor), 
+ 
+ 
  
  
  path('listpacientes', views.list_pacientes, name="listpacientes"),
