@@ -5,6 +5,54 @@ Doctores
 {% endblock %}
 
 {% block content %}
-dotores
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">        
+        <h2>Nuevo Doctor</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="registrar_doctor"  method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombreDr" class="form-control" placeholder="Nombre"
+                            maxlength="50" required>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="text" id="apellido" name="apellidoDr" class="form-control" placeholder="Apellido"
+                            maxlength="50" required>
+                    </div><br>     
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Lista de Doctores</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>                        
+                        <th>Código</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>  
+                        <th colspan="2">Opciones</th>                                              
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doctor in doctores %}
+                    <tr>                        
+                        <td>{{doctor.id}}</td>
+                        <td>{{doctor.nombre}}</td>
+                        <td>{{doctor.apellido}}</td>                        
+                        <td><a href="edicion_doctor/{{doctor.id}}" class="btn btn-primary">Editar</a></td>
+                        <td><a href="eliminar_doctor/{{doctor.id}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>                      
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
