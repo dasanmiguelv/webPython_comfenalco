@@ -20,10 +20,11 @@ class Doctor(models.Model):
         return "{} {}".format(self.nombre, self.apellido)    
 
 class Cita_medica(models.Model):
+    id = models.AutoField(primary_key=True)
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     ubicacion = models.CharField(max_length=200)
     fecha = models.DateField()
 
     def __str__(self):
-        return "{} {} - {} -  {}".format(self.paciente, self.doctor, self.ubicacion, self.fecha)
+        return "{} {} - {} - {}".format(self.paciente, self.doctor, self.ubicacion, self.fecha)

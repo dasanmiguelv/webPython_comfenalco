@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Editar Doctores
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Editar Doctor</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="editar_doctor" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="id" name="idDr" value="{{doctores.id}}" class="form-control"
+                            placeholder="Id" maxlength="50" readonly required>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombreDr" value="{{doctores.nombre}}" class="form-control"
+                            placeholder="Nombre" maxlength="50" required>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="text" id="apellido" name="apellidoDr" value="{{doctores.apellido}}"
+                            class="form-control" placeholder="Apellido" maxlength="50" required>
+                    </div><br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
