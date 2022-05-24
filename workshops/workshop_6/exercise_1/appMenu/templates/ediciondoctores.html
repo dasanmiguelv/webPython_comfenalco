@@ -11,7 +11,7 @@ Editar Doctores
         <h2>Editar Doctor</h2>
         <div class="card">
             <div class="card-body">
-                <form action="editar_doctor" method="POST">
+                <form action="{% url 'appMenu:editar_doctor' %}" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
                         <input type="text" id="id" name="idDr" value="{{doctores.id}}" class="form-control"
