@@ -8,8 +8,8 @@ urlpatterns = [
  path("", views.index, name="home"),
  path('list_doctores', views.list_doctor, name="list_doctores"), 
  path('registrar_doctor', views.registrar_doctor),
- path('edicion_doctor/<id>', views.edicion_doctor),
- path('editar_doctor', views.editar_doctor),
+ path('editar_doctor', views.editar_doctor, name="editar_doctor"),
+ path('edicion_doctor/<id>', views.edicion_doctor), 
  path('eliminar_doctor/<id>', views.eliminar_doctor), 
  
  path('listpacientes', views.list_pacientes, name="listpacientes"),
